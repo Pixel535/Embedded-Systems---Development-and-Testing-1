@@ -1,0 +1,114 @@
+C51 COMPILER V9.51   PROG3                                                                 04/12/2022 12:53:00 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE PROG3
+OBJECT MODULE PLACED IN prog3.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE prog3.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          void Delay(void)
+   4          {
+   5   1         unsigned char i;
+   6   1         unsigned char j;
+   7   1         for(i=0;i<100;i++)
+   8   1         {
+   9   2            for(j=0;j<200;j++)
+  10   2            { ; }
+  11   2         }
+  12   1      } 
+  13          
+  14          
+  15          void main(void)
+  16          {
+  17   1        while(1)
+  18   1        {
+  19   2          if(P3 == 0xFB)
+  20   2          {
+  21   3            P2 = 0x7F;
+  22   3            Delay ();
+  23   3            if(P3 != 0xFB) break;
+  24   3            P2 = 0x3F;
+  25   3            Delay ();
+  26   3            if(P3 != 0xFB) break;
+  27   3            P2 = 0x1F;
+  28   3            Delay ();
+  29   3            if(P3 != 0xFB) break;
+  30   3            P2 = 0x0F;
+  31   3            Delay ();
+  32   3            if(P3 != 0xFB) break;
+  33   3            P2 = 0x07;
+  34   3            Delay ();
+  35   3            if(P3 != 0xFB) break;
+  36   3            P2 = 0x03;
+  37   3            Delay ();
+  38   3            if(P3 != 0xFB) break;
+  39   3            P2 = 0x01;
+  40   3            Delay ();
+  41   3            if(P3 != 0xFB) break;
+  42   3            P2 = 0x00;
+  43   3            Delay ();
+  44   3            if(P3 != 0xFB) break;
+  45   3            P2 = 0xFF;
+  46   3            Delay (); 
+  47   3            Delay ();
+  48   3            if(P3 != 0xFB) break;
+  49   3            P2 = 0x7F;
+  50   3            if(P3 != 0xFB) break;
+  51   3            
+  52   3          }
+  53   2          else
+  54   2          { 
+  55   3            
+C51 COMPILER V9.51   PROG3                                                                 04/12/2022 12:53:00 PAGE 2   
+
+  56   3            P2 = 0xFE;
+  57   3            Delay ();
+  58   3            if(P3 == 0xFB) break;
+  59   3            P2 = 0xFC;
+  60   3            Delay ();
+  61   3            if(P3 == 0xFB) break;
+  62   3            P2 = 0xF8;
+  63   3            Delay ();
+  64   3            if(P3 == 0xFB) break;
+  65   3            P2 = 0xF0;
+  66   3            Delay ();
+  67   3            if(P3 == 0xFB) break;
+  68   3            P2 = 0xE0;
+  69   3            Delay ();
+  70   3            if(P3 == 0xFB) break;
+  71   3            P2 = 0xC0;
+  72   3            Delay ();
+  73   3            if(P3 == 0xFB) break;
+  74   3            P2 = 0x80;
+  75   3            Delay ();
+  76   3            if(P3 == 0xFB) break;
+  77   3            P2 = 0x00;
+  78   3            Delay ();
+  79   3            if(P3 == 0xFB) break;
+  80   3            P2 = 0xFF;
+  81   3            Delay (); 
+  82   3            Delay ();
+  83   3            if(P3 == 0xFB) break;
+  84   3            P2 = 0xFE;
+  85   3            if(P3 == 0xFB) break;
+  86   3            
+  87   3          }
+  88   2        }
+  89   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    292    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

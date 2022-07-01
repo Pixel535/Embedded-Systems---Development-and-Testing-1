@@ -1,0 +1,154 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/12/2022  12:53:00  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE prog3.obj TO Lab1_proj3 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  prog3.obj (PROG3)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  Lab1_proj3 (PROG3)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0111H     UNIT         ?PR?MAIN?PROG3
+            CODE    0114H     0013H     UNIT         ?PR?DELAY?PROG3
+            CODE    0127H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   Lab1_proj3 (PROG3)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?PROG3
+
+?PR?MAIN?PROG3
+  +--> ?PR?DELAY?PROG3
+
+
+
+SYMBOL TABLE OF MODULE:  Lab1_proj3 (PROG3)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PROG3
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0003H         PUBLIC        main
+  C:011AH         PUBLIC        Delay
+  -------         PROC          L?0034
+  -------         ENDPROC       L?0034
+  -------         PROC          DELAY
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/12/2022  12:53:00  PAGE 2
+
+
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:011AH         LINE#         3
+  C:011AH         LINE#         4
+  C:011AH         LINE#         7
+  C:011CH         LINE#         8
+  C:011CH         LINE#         9
+  C:011EH         LINE#         10
+  C:0122H         LINE#         11
+  C:0126H         LINE#         12
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  C:0003H         LINE#         15
+  C:0003H         LINE#         16
+  C:0003H         LINE#         17
+  C:0003H         LINE#         18
+  C:0003H         LINE#         19
+  C:000CH         LINE#         20
+  C:000CH         LINE#         21
+  C:000FH         LINE#         22
+  C:0012H         LINE#         23
+  C:001BH         LINE#         24
+  C:001EH         LINE#         25
+  C:0021H         LINE#         26
+  C:002AH         LINE#         27
+  C:002DH         LINE#         28
+  C:0030H         LINE#         29
+  C:0039H         LINE#         30
+  C:003CH         LINE#         31
+  C:003FH         LINE#         32
+  C:0048H         LINE#         33
+  C:004BH         LINE#         34
+  C:004EH         LINE#         35
+  C:0057H         LINE#         36
+  C:005AH         LINE#         37
+  C:005DH         LINE#         38
+  C:0066H         LINE#         39
+  C:0069H         LINE#         40
+  C:006CH         LINE#         41
+  C:0075H         LINE#         42
+  C:0078H         LINE#         43
+  C:007BH         LINE#         44
+  C:0084H         LINE#         45
+  C:0084H         LINE#         46
+  C:0084H         LINE#         47
+  C:0087H         LINE#         48
+  C:0090H         LINE#         49
+  C:0093H         LINE#         50
+  C:009DH         LINE#         54
+  C:009DH         LINE#         56
+  C:00A0H         LINE#         57
+  C:00A3H         LINE#         58
+  C:00A9H         LINE#         59
+  C:00ACH         LINE#         60
+  C:00AFH         LINE#         61
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/12/2022  12:53:00  PAGE 3
+
+
+  C:00B5H         LINE#         62
+  C:00B8H         LINE#         63
+  C:00BBH         LINE#         64
+  C:00C1H         LINE#         65
+  C:00C4H         LINE#         66
+  C:00C7H         LINE#         67
+  C:00CDH         LINE#         68
+  C:00D0H         LINE#         69
+  C:00D3H         LINE#         70
+  C:00D9H         LINE#         71
+  C:00DCH         LINE#         72
+  C:00DFH         LINE#         73
+  C:00E5H         LINE#         74
+  C:00E8H         LINE#         75
+  C:00EBH         LINE#         76
+  C:00F1H         LINE#         77
+  C:00F4H         LINE#         78
+  C:00F7H         LINE#         79
+  C:00FDH         LINE#         80
+  C:00FDH         LINE#         81
+  C:00FDH         LINE#         82
+  C:0100H         LINE#         83
+  C:0106H         LINE#         84
+  C:0109H         LINE#         85
+  C:0113H         LINE#         89
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        PROG3
+
+Program Size: data=9.0 xdata=0 code=307
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

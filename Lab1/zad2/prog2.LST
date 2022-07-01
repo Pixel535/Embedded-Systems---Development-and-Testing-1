@@ -1,0 +1,55 @@
+C51 COMPILER V9.51   PROG2                                                                 04/12/2022 12:51:02 PAGE 1   
+
+
+C51 COMPILER V9.51, COMPILATION OF MODULE PROG2
+OBJECT MODULE PLACED IN prog2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE prog2.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          void Delay(void)
+   4          {
+   5   1         unsigned char i;
+   6   1         unsigned char j;
+   7   1         for(i=0;i<100;i++)
+   8   1         {
+   9   2            for(j=0;j<200;j++)
+  10   2            { ; }
+  11   2         }
+  12   1      } 
+  13          
+  14          
+  15          void main(void)
+  16          {
+  17   1        P2 = 0x3F;
+  18   1        while(1)
+  19   1         {
+  20   2            Delay ();
+  21   2            switch(P2)
+  22   2            {
+  23   3                case 0x3F: P2 = 0x9F; break;
+  24   3                case 0x9F: Delay (); Delay (); P2 = 0xCF; break;
+  25   3                case 0xCF: P2 = 0xE7; break;
+  26   3                case 0xE7: Delay (); Delay (); P2 = 0xF3; break;
+  27   3                case 0xF3: P2 = 0xF9; break;
+  28   3                case 0xF9: Delay (); Delay (); P2 = 0xFC; break;
+  29   3                case 0xFC: P2 = 0x3F; break;
+  30   3            }
+  31   2         }
+  32   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    100    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
